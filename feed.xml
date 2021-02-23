@@ -1,31 +1,153 @@
----
-layout: null
-nav_exclude: true
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Hogwash</title>
+    <description>A spiffy internet webpage</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 22 Feb 2021 22:48:39 -0500</pubDate>
+    <lastBuildDate>Mon, 22 Feb 2021 22:48:39 -0500</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Part Two - The Genesis of Machine Learning: Why Neural Networks look like Our Brains</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Connectionism: how our brains learn and make decisions iteratively.&lt;/span&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;/assets/img/InfoBottleneck_2880x1620.jpg&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;strong&gt;Dogs again&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So why would a growling dog prompt a fight/flight reaction, when previously we wanted to pet them? Perhaps we saw a gruesome attach scene in a movie, or we were bit by a dog in the past, or we were taught to give dogs their space. Regardless, at one point, we didn’t understand the potential of a growling dog, and now we do. We learned – and our brains adjusted. At the outset of learning that a growling dog might be harmful, our brains created new neurons, connecting them with the old ones that represent ‘dog’. Our brains may even have reformed the concept of ‘dog’ entirely.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Original feelings towards dogs:&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/ML flow chart 1.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;After getting bit by dog:&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/ML flow chart 2.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Originally, this flow of decision making just included ‘pet’, but now it has ‘harmful’ and ‘run. Our next interaction with a dog may find them to be not harmful, but also totally unresponsive to petting, and thus we add ‘ignore’ to our responses.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/ML flow chart 3.png&quot; /&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As stated, this is an oversimplified example. Our brains are so complex and well-optimized that contextual variability is added to the equation in an instant. At the same time the chain of decisions is made, outside information is simultaneously considered. &lt;label for=&quot;troyandabed&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;troyandabed&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/fluffy_the_three_headed_dog.jpg&quot; /&gt;&lt;br /&gt;Lots of information to glean from Fluffy.&lt;/span&gt; The dog may be attached to a leash, it may be growling at the other dog we happen to have with us, it may not be growling at all, but have its lips pulled back in a permanent snarl. We may also see a fence within running distance or perhaps its owner assures us it’s friendly, something we may be likely to believe because the owner is a trusted friend. Our brains process and respond to all of this information in an instant. And we add it to our decision tree.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frequent vs Infrequent experiences&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Over time, the more experiences we have with dogs (whether on tv, in person, or through a story), the better we can fine-tune our decision making. We may start to notice correlations between breeds, sizes, hair length, geographic location, emaciation, age, or nearby animals. The more information we attend to and add to our system, the more adept will be at responding to future experiences.&lt;/p&gt;
+
+&lt;p&gt;As these experiences accumulate, they simultaneously create new connections for new information, and strengthen connections from previous experiences. And these &lt;a href=&quot;http://scienceoflearning.jhu.edu/research/how-does-learning-impact-neural-networks-in-the-primary-visual-cortex&quot;&gt;neural connections get stronger&lt;/a&gt; according to the frequency of the results we get. And the stronger the connection, the more often our brains will visit that cluster to make an “informed” decision; or what one might call logic. Thus, if the neural connection between ‘dog’ and ‘run’ is stronger than ‘dog’ and ‘pet’, we will run.&lt;/p&gt;
+
+&lt;p&gt;On the flip side, for those experiences that happen infrequently, we probably will still remember, but due to their infrequency, we don’t visit the connection very often to influence our decisions. Take the example of running into a low hanging/descending doorway, perhaps in a corridor we are unfamiliar with. If this doorway is one we don’t frequent very often, than we are unlikely to take it very seriously within the grand scheme of doorways. We may run into the doorway a few times while visiting the corridor, and after a few times, we may, subconsciously or otherwise, get into the habit of ducking for this particular doorway. &lt;label for=&quot;storm trooper&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;storm trooper&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Hitting head on doorway.jpg&quot; /&gt;&lt;br /&gt;The &lt;del&gt;force&lt;/del&gt; neural pathway is &lt;del&gt;strong&lt;/del&gt; weak with this one.&lt;/span&gt; But take the corridor away and replace it with the normal doorways we are apt to come across, and we no longer duck. The habit of ducking was unable to be ingrained because this is not a situation we normally find ourselves. Thus, the connection we made between doorway and duck while we visited the corridor dies, as we no longer need it. Thus, neuron connections also get weaker, the less frequently we visit them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recency, Common Sense, and Emotions - Oh My!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s important to note, that our decisions don’t always go through the chain of reasoning as described in the dog example above. We can override them for a variety of reasons: perhaps the last experience we had was unlike the majority and the recency of that event stands out to us more clearly than the strongest neuron cluster. Or perhaps we are in search of the Philosopher’s Stone and must bypass the three-headed dog standing over the trap door we must enter by mustering up the gumption to face our ‘common sense’ (or in this case, what our brains tell us we should avoid).&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;troyandabed&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;troyandabed&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Troy_and_abed.jpg&quot; /&gt;&lt;br /&gt;Troy and Abed&lt;/span&gt;
+Our decision making is often influenced by our emotions as well. As anyone with even a hint of a phobia can attest to, we can be influenced to avoid something due to an extreme emotional experience, even if we logically understand that we aren’t in danger. Likewise, but to a much lesser degree, how many decisions are made whilst trying to calculate every angle, but in the end, finding this to be a tedious task, and instead picking the one that feels the best? Take the grade school example of making a pros and cons list of the people we want to be our boy/girl friend? Let’s call our potential relationship candidates Troy and Abed. If, through the pros/cons process, they come out even, how do we decide who to pick? Mostly likely: Feeling.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heuristic Learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of the learning process, what is important in this example, is that we calculated our options. We knew that some decisions require thorough assessment, and thus weighed all the variables and at least attempted a logically sound choice. We can call this method of decision making &lt;em&gt;heuristics&lt;/em&gt;, (AKA ‘cognitive shortcuts’ or ‘rules of thumb’) a practical, and sometimes more efficient, approach to &lt;a href=&quot;http://www.sfu.ca/~jeffpell/papers/RomanyciaPelletierHeuristics85.pdf&quot;&gt;problem solving&lt;/a&gt;, whereby we may employ a commonly successful technique or model in assisting our own hunt for answers.&lt;label for=&quot;1.5&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1.5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Also check out the oft nefarious &lt;a href=&quot;https://projects.iq.harvard.edu/expose/book/interactions-heuristics-and-biases-making-decisions&quot;&gt;cognitive biases&lt;/a&gt; imbedded heuristics especially the availability heuristic! &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In this example, we attempted to root out for ourselves who the optimal boyfriend was using the timeless pros and cons list.&lt;/p&gt;
+
+&lt;p&gt;All the boxes on the pros and cons checklist are weighted the same way, or that is to say, the characteristics we were judging Troy and Abed on have equally strong connections, so they came out even. Thus, some might say that the deciding factor, the “feeling” we used in grade school to make a final call, was in actuality the product of a stronger neural connection between where Troy’s conceptual reality lives in our heads and where Abed’s lives. This connection was fed via a simple emotional pull. But we’ll end this train of thought here, as emotional influences on neurological behavior goes beyond the scope of this series.&lt;/p&gt;
+
+&lt;p&gt;Heuristic learning however, does not always use the same approach to solve a problem. Take for example, trying to locate Miso soup at a grocery store. How would you look for it? There are multiple options, perhaps the easiest of which is asking an employee, however if left to our own devices what do we do? Two other methods are 1.) Look in all the seemingly relevant aisles - oriental cooking, soup, sauces/condiments, shelf-stable items etc. 2.) Traverse every aisle, scanning up and down every shelf, until it’s located. While the first method is more efficient and usually successful, the second method guarantees success (that is if we know the store carries Miso), however it’s far more time-consuming. In the interest of heuristics, both of these processes work, and both show a logical effort.&lt;/p&gt;
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/Dilbert heuristics.jpg&quot; /&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;And what does this mean in terms of our brain’s learning? We decide how to proceed based on the information we have stored. But heuristics goes beyond the need to make a simple decision, it involves a process of logical reasoning in which we decipher how best to proceed according to relevant experience and current situations. And over time, we get better at calculating the correct method based on time after time of improving our odds with every cumulative experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s not hard to believe that we would rely on the wisdom of past experience, especially our own, though how often have we repeated something we regret because we forgot what happened the first time, or else it seemed like a one time thing? But perhaps after the second time, we learn; and if not, than we remember that we should have. Even the insanity witticism, ever misattributed to Einstein, applies: “Insanity is doing the same thing over and over again, but expecting a different result”. While insanity is certainly an exaggeration of say, hitting your head on a low hanging doorway four times in a row, this aphorism implies that learning from these experiences over time is the more natural outcome; not learning, and thereby not changing our behavior, is thus illogical and unsustainable. If we don’t add these experiences up, and transcribe them into additional connections in our brains, than we can’t make better decisions in the future. And as it turns out, neural networks learn in much the same way.&lt;/p&gt;
+
+&lt;p&gt;And thus, we come to Machine Learning.&lt;/p&gt;
+
+&lt;p&gt;Part 3 (coming soon) will discuss how machine learning compares to this human form of heuristic learning.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 17 Feb 2021 05:46:04 -0500</pubDate>
+        <link>/articles/21/Part_Two_The-Genesis-of-Machine-Learning-Why-Neural-Networks-look-like-Our-Brains</link>
+        <guid isPermaLink="true">/articles/21/Part_Two_The-Genesis-of-Machine-Learning-Why-Neural-Networks-look-like-Our-Brains</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>css</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Part One - The Genesis of Machine Learning: Why Neural Networks look like Our Brains</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Machine learning is pretty wild. And as its functional forbearer, so is the human brain!&lt;/span&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;/assets/img/ML Brains 1.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;strong&gt;Biomimicry: From Brains to Machines&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Computers were originally designed to solve complex rote problems; an algorithm would follow a formulaic structure to synthesize and calculate copious amounts of data before solving for a given output. These were generally time consuming, but not altogether unusual, for a human to complete. Nonetheless, computers came to replace many of the mathematicians who tediously plodded through equation after equation, with the possibility of starting from scratch from a single misplaced decimal point. Hidden Figures, a biography of early NASA engineers&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;It’s important to note that this book was more than just a historical capsule of early human computer work; it was also intended as a testament to the race and gender discrimination of the time and to celebrate the yet unrecognized work of black women in such a white male dominated sphere. &lt;/span&gt; &lt;label for=&quot;hiddenfigures&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;hiddenfigures&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/The_official_poster_for_the_film_Hidden_Figures,_2016.jpg&quot; /&gt;&lt;br /&gt;&lt;em&gt;Hidden Figures&lt;/em&gt; (2016)&lt;/span&gt;, showcases some of the human side of this work through the &lt;a href=&quot;https://www.thehumancomputerproject.com/women&quot;&gt;efforts of women&lt;/a&gt; dedicated to calculating most of the behind the scenes engineering problems of early space travel. These women were, in fact, called computers! Now, however, that work is solved by computers of a less biological nature.&lt;/p&gt;
+
+&lt;p&gt;Artificial intelligence (AI) became the natural progeny of this original computer when humans saw the potential for it to “&lt;a href=&quot;https://www.deeplearningbook.org/contents/intro.html&quot;&gt;think&lt;/a&gt;” for itself. If a computer can calculate all that information on its own (albeit after having been programmed by a human who continues to monitor its progress), why shouldn’t a computer make its own decisions? And what better framework than the human brain?&lt;/p&gt;
+
+&lt;p&gt;The role of the brain here, in unlocking a new form of computation, is an example of &lt;em&gt;biomimicry&lt;/em&gt;, a creationary technique whereby we model the design of manmade technologies from biological entities &lt;label for=&quot;1.5&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1.5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;If you want more examples on the innovative technologies inspired by nature, check out the &lt;a href=&quot;https://biomimicry.org/&quot;&gt;Biomimicry Institute&lt;/a&gt;. &lt;/span&gt;. While this technique is dependent on what is being built, I believe it behooves humans to study nature’s processes as they have already been put through a rigorous round of methodological ‘testing’ (eons and eons over!) to refine a species’s functionality to its most efficient and sustainable version of itself; we call this process evolution. This does not mean that nature is the best fit for all manmade counterparts; evolution tailors the biology of an individual species according to its environment, and no environment is the same, thus no population is the same even within a species. As mentioned as well, the process of evolution occurs consistently and constantly, however the  results tend not to be significant or noticeable until thousands of years have past. Thus a species may not appear to fit its environment at any given moment, however biologically it is ever intending to. Nonetheless, we can still use the intentions and ‘design choices’ of evolution to inspire technologies with a comparable function.&lt;/p&gt;
+
+&lt;p&gt;Which brings us to brains and computers. Like their mechanical counterparts, brains are complex, but relatively predictable, and more than that, they involve a system of inputs and outputs. Thus, it’s not difficult to understand the comparison between human cognition and computational “thinking”. After all, many machines learn in much the same way we do – hence the anthropomorphized terms of artificial &lt;em&gt;intelligence&lt;/em&gt; and machine &lt;em&gt;learning&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today, machine learning (ML), &lt;a href=&quot;https://medium.com/swlh/deep-learning-101-artificial-intelligence-and-machine-learning-basics-5687a75212e3&quot;&gt;a subfield of artificial intelligence&lt;/a&gt;, has, in itself, become a broad field](https://machinelearningmastery.com/types-of-learning-in-machine-learning/), with different models for different learning approaches, which are subsequently built to synthesize and analyze data differently. We have also progressed so far into the AI discipline, that ML models have for the most part dropped the brain-framed training wheels and have taken on a life of their own that no longer mimic brain functions. But that doesn’t restrict us from examining the origin story of at least one kind of brain process and one kind of ML model.&lt;/p&gt;
+
+&lt;p&gt;In the interest of comparing brain processes with ML, I will reduce our brains’ processing down to a logical structure, promoted by &lt;a href=&quot;https://plato.stanford.edu/entries/cognitive-science/&quot;&gt;cognitive scientists&lt;/a&gt;[&lt;a href=&quot;#_ftn3&quot;&gt;3]&lt;/a&gt; in illustrating cognition via &lt;a href=&quot;https://plato.stanford.edu/entries/connectionism/&quot;&gt;connectionism&lt;/a&gt;. This will in no way represent all actions or decision-making but will explain the theory behind basic processes. For this same reason, I will stick to explaining a &lt;em&gt;neural network&lt;/em&gt;, which is the ML model that finds its deepest roots in biological processes. In fact, originally known as an &lt;em&gt;artificial&lt;/em&gt; neural network, this model takes its name from its ‘predecessor’, &lt;em&gt;biological&lt;/em&gt; neural networks. As the ML version has grown in societal ubiquity (from &lt;a href=&quot;https://www.ijedr.org/papers/IJEDR1704192.pdf&quot;&gt;handwriting recognition&lt;/a&gt; to &lt;a href=&quot;https://arxiv.org/pdf/1708.08559.pdf&quot;&gt;self-driving vehicles&lt;/a&gt;), we have since dropped ‘artificial’ and ‘biological’ to make simply &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So how are neural networks like neural networks? Or in other words, how is a brain like a machine?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Our brains are comprised of billions of neurons. These are interconnected in a variety of unique ways with potentially unlimited connections. Unlike popular belief, the brain is not one big ball of neurons; instead, it has architectural symmetry and finely engineered spaces and corridors.&lt;/p&gt;
+
+&lt;p&gt;In describing the brain, I’ll begin at one of the smallest units – a neuron. A neuron is essentially a relay station, set within an infinite chain of relay stations, receiving and sending forth information in the form of electrochemical signals. Each neuron has a cell body, with upwards of dozens of little tendrils shooting out called &lt;em&gt;dendrites&lt;/em&gt;. One of these tendrils is much longer than the r rest and is in fact something else altogether - the &lt;em&gt;axon&lt;/em&gt;. And at the end of the axon are dozens of &lt;em&gt;synapses&lt;/em&gt;, which could be thought of as a pitching machine at a batting cage.  When a signal is fired, electricity received from neighboring neurons gathers in the cell body. Once enough signals have accumulated up to a certain threshold, the cell body fires an electrochemical pulse down the axon, which will in turn be rapid fire released through the synapses to neighboring cell’s dendrites which must grab them as if catching a baseball. Once those dendrites receive enough signals to pass the electrochemical threshold, they will fire an accompanying pulse down that axon. This happens instantaneously and in perpetuity through millions of other neurons until the signal reaches it goal.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/Structure-Of-Neurons-In-Brain.jpg&quot; /&gt;&lt;figcaption&gt;Anatomy of a neuron&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;When our brain is processing (thinking, remembering, reading, sensing etc.), these signals follow specialized neural pathways that are equipped to send a particular kind of information. For instance, when viewing an object, the image that appears in our eyes is deconstructed into basic info (color, shape, shading, perspective etc.) and sent to the &lt;em&gt;back&lt;/em&gt; of our brains to the occipital lobe via &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/books/NBK482504/&quot;&gt;the Lateral Geniculate Nucleus (LGN)&lt;/a&gt;.&lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;https://www.neuroscientificallychallenged.com/blog/know-your-brain-primary-visual-cortex&quot;&gt;This article&lt;/a&gt; provides an excellent breakdown of this process. &lt;/span&gt; One could say that the neurons in this channel were trained to recognize and relay only visual info, as they connect to parts of the brain designed to process visual stimuli – the eyes and the occipital lobe.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/1200px-Human_visual_pathway.png&quot; /&gt;&lt;figcaption&gt;Human visual pathway&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The occipital lobe then processes the images and sends them to other parts of our brain for further analysis. If it’s a growling dog, that information may be disseminated &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025529/&quot;&gt;through the amygdala&lt;/a&gt;, via various other lobes and channels, which will kick in a fight/flight reaction, which will engage our autonomic nervous system (ANS), which may cause us to run in a panic. This takes place in milliseconds.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/ML flow chart 4.png&quot; /&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As a side note, stimuli, here, does not just refer to visual information. It could be somatosensory, as when touching a hot stove. It could be auditory, as when identifying a piece of music, or olfactory as when inhaling freshly made cinnamon buns. All of these coalesce into the representations in our minds that influence the decisions we make.&lt;label for=&quot;4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;There are also multiple competing theories of how our perception works and especially the kinds of schema we create: check out an article that summarizes that &lt;a href=&quot;https://www.simplypsychology.org/perception-theories.html&quot;&gt;here&lt;/a&gt;. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sounds Assembly Line-ish&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This explanation is vastly oversimplified (and for this example in particular, actually skips a few steps), but it may sound like another familiar historically-relevant process – &lt;em&gt;assembly lines&lt;/em&gt;, in which we see a step-by-step process that accumulates into a final product. We could say that each neuron represents a person with a specialty or task, each lobe or section of our brains represents a department, and between those is a conveyor belt that streamlines the packaged information from group to group. In other words, it has a linear orientation with one direction that starts and stops at the same place every time.&lt;/p&gt;
+
+&lt;p&gt;In this way, we may prefer BF Skinner’s perspective&lt;label for=&quot;5&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Skinner was originally from the era of behavioral psychology in which the mind (and by association the brain) was assessed by a person’s behavior, or else response to stimuli. This was also the era of Pavlov’s dog conditioning experiments – a perfect example of behavioral psychology in that Pavlov provided stimuli in the form of food (further associated with the sound of a bell) and tracked how the dogs responded (by drooling). &lt;/span&gt;, in that our brains are a “black box”. We can’t examine the internal workings; we can only monitor what comes out as a response to what goes in. Thus, one or multiple things is fed into one side of the box and something else entirely emerges on the other side. Likewise, at each destination in an assembly line, another part is added until a whole is complete.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But wait – Not Quite&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To imply our brains are assembly line-ish is to have an incomplete understanding of how they work. In creating thousands of the exact same product, an assembly line does not loop back on itself, reconstruct the systematic assembly process based on a new part, or even switch the direction of the conveyor belt (this will make more sense later). The process is predetermined, and the work is the same regardless of individual variation. Our brains on the other hand, are constantly changing - renovating preexisting neuron structures, strengthening commonly used connections, removing and replacing unused ones. They have plasticity in other words.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;blackbox&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;blackbox&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Black Box.jpg&quot; /&gt;&lt;br /&gt;Skinner’s idea of the human pyche.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;And while Skinner’s black box theory has largely been debunked, it does hold a key component for machine learning - inputs and outputs; stimuli go in, behavior comes out. Colloquially, ML models too are even referred to as “black boxes” in that when they are complex enough, it’s difficult to wholly understand their internal workings; although this may be &lt;a href=&quot;https://towardsdatascience.com/the-black-box-metaphor-in-machine-learning-4e57a3a1d2b0&quot;&gt;an over estimation&lt;/a&gt;. What Skinner’s theory neglects, however, at least for what is relevant here, is the iterative chain of processes it takes to receive an output, and furthermore, how that output stems from an accumulation of information gathered over time.&lt;/p&gt;
+
+&lt;p&gt;Thus, we come to the next step in the brain/computer analysis. A brain is constantly observing new information. This new information is added to the preexisting information or stimuli (stored in our brains in the form of neuron clusters), for which a new paradigm is constructed or a new response is added to the list.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;Part_Two_The-Genesis-of-Machine-Learning-Why-Neural-Networks-look-like-Our-Brains&quot;&gt;part two&lt;/a&gt; of this series, I’ll talk about the iterative nature of human learning, before diving into the machine learning version of this process in part three.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 07 Feb 2021 03:46:04 -0500</pubDate>
+        <link>/articles/21/The-Genesis-of-Machine-Learning-Why-Neural-Networks-look-like-Our-Brains</link>
+        <guid isPermaLink="true">/articles/21/The-Genesis-of-Machine-Learning-Why-Neural-Networks-look-like-Our-Brains</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>css</category>
+        
+      </item>
+    
   </channel>
 </rss>
